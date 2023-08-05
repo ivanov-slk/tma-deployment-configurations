@@ -1,0 +1,50 @@
+### Full specification:
+### https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tma-data-generator
+  namespace: argocd-system
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: tma
+spec:
+  project: tma
+
+  source:
+    repoURL: https://github.com/ivanov-slk/tma-deployment-configurations.git
+    targetRevision: HEAD
+    path: charts/tma-data-generator
+    helm:
+      passCredentials: false
+      valueFiles:
+        - environments/values-develop.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    # name: kubernetes-cluster
+    namespace: tma
+
+  info:
+    - name: "Name:"
+      value: "Temperature monitoring application"
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+      allowEmpty: false
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
+      - RespectIgnoreDifferences=true
+    managedNamespaceMetadata:
+      labels:
+        name: tma
+      annotations:
+        linkerd.io/inject: enabled
+  revisionHistoryLimit: 10
