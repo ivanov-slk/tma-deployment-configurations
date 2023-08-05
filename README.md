@@ -2,7 +2,7 @@
 
 Deployment configurations for the Temperature Monitoring Applicaiton.
 
-The Temperature Monitoring Application is an educational Kafka app, used as a playground for exploring common Kafka/streaming/microservice topics.
+The Temperature Monitoring Application is an educational Kafka app, used as a playground for learning Go and exploring common Kafka/streaming/microservice topics.
 
 ## Services
 
