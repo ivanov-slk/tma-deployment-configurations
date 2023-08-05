@@ -1,0 +1,43 @@
+### Full specification:
+### https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/project.yaml
+
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: tma
+  namespace: argocd-system
+  # Finalizer that ensures that project is not deleted until it is not referenced by any application
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  # Project description
+  description: ArgoCD project for the Temperature Monitoring Application.
+
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+    - "https://github.com/ivanov-slk/*"
+
+  # Only permit applications to deploy to the guestbook namespace in the same cluster
+  # Destination clusters can be identified by 'server', 'name', or both.
+  destinations:
+    - namespace: tma
+      server: https://kubernetes.default.svc
+      name: kubernetes-cluster
+
+  # Deny all cluster-scoped resources from being created, except for Namespace
+  clusterResourceWhitelist:
+    - group: ""
+      kind: Namespace
+
+  # Allow all namespaced-scoped resources to be created, except for ResourceQuota, LimitRange, NetworkPolicy
+  namespaceResourceBlacklist:
+    - group: ""
+      kind: ResourceQuota
+    - group: ""
+      kind: LimitRange
+    - group: ""
+      kind: NetworkPolicy
+
+  # Enables namespace orphaned resource monitoring.
+  orphanedResources:
+    warn: false
