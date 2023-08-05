@@ -1,0 +1,48 @@
+### Full specification:
+### https://github.com/argoproj/argo-cd/blob/master/docs/operator-manual/application.yaml
+
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tma-service-tester
+  namespace: argocd-system
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: tma
+spec:
+  project: tma
+
+  source:
+    repoURL: https://github.com/ivanov-slk/tma-deployment-configurations.git
+    targetRevision: HEAD
+    path: tma-service-tester
+    directory:
+      recurse: true
+      include: "*.yaml"
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tma
+
+  info:
+    - name: "Name:"
+      value: "Temperature monitoring application"
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false
+      allowEmpty: false
+    syncOptions:
+      - Validate=true
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
+      - RespectIgnoreDifferences=true
+    managedNamespaceMetadata:
+      labels:
+        name: tma
+      annotations:
+        linkerd.io/inject: enabled
+  revisionHistoryLimit: 10
