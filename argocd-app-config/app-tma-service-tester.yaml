@@ -19,7 +19,7 @@ spec:
     path: tma-service-tester
     directory:
       recurse: true
-      include: "*.yaml"
+      include: "*.jsonnet"
 
   destination:
     server: https://kubernetes.default.svc
