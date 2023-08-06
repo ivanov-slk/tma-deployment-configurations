@@ -5,9 +5,9 @@ local params = import 'params-develop.libsonnet';
   kind: 'Job',
   metadata: {
     name: params.name,
-    namespace: params.namespace
+    namespace: params.namespace,
     annotations: [
-      { 'argocd.argoproj.io/hook': 'PostSync' },
+      { 'argocd.argoproj.io/hook': 'Sync' },
       { 'argocd.argoproj.io/hook-delete-policy': 'BeforeHookCreation' },
     ],
   },
