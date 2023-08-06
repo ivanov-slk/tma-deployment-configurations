@@ -14,6 +14,7 @@ local params = import 'params-develop.libsonnet';
   spec: {
     template: {
       spec: {
+        restartPolicy: "OnFailure",
         containers: [
           {
             image: params.image,
