@@ -6,10 +6,10 @@ local params = import 'params-develop.libsonnet';
   metadata: {
     generateName: params.name,
     namespace: params.namespace,
-    annotations: {
-      'argocd.argoproj.io/hook': 'Sync',
-      'argocd.argoproj.io/hook-delete-policy': 'BeforeHookCreation',
-    },
+    //annotations: {
+      //'argocd.argoproj.io/hook': 'Sync',
+      //'argocd.argoproj.io/hook-delete-policy': 'BeforeHookCreation',
+    //},
   },
   spec: {
     template: {
