@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.1.0...v1.2.0) (2023-08-07)
+
+
+### Features
+
+* Add basic yamls for the service tester. ([be60bda](https://github.com/ivanov-slk/tma-deployment-configurations/commit/be60bdaf2ce3ad3cf2a169d5465986915d814474))
+* Add hooks to the service tester job. ([a3ba5cc](https://github.com/ivanov-slk/tma-deployment-configurations/commit/a3ba5cc5b5e58c3bea2bf6b800e4b84365c8fb8d))
+
 ## [1.1.0](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.0.0...v1.1.0) (2023-08-05)
 
 
