@@ -4,12 +4,12 @@ local params = import 'params-develop.libsonnet';
   apiVersion: 'batch/v1',
   kind: 'Job',
   metadata: {
-    generateName: params.name,
+    name: params.name,
     namespace: params.namespace,
-    //annotations: {
-      //'argocd.argoproj.io/hook': 'Sync',
-      //'argocd.argoproj.io/hook-delete-policy': 'BeforeHookCreation',
-    //},
+    annotations: {
+      'argocd.argoproj.io/hook': 'Sync',
+      'argocd.argoproj.io/hook-delete-policy': 'BeforeHookCreation',
+    },
   },
   spec: {
     template: {
