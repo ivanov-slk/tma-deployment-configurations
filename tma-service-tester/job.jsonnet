@@ -7,7 +7,7 @@ local params = import 'params-develop.libsonnet';
     name: params.name,
     namespace: params.namespace,
     annotations: {
-      'argocd.argoproj.io/hook': 'Sync',
+      'argocd.argoproj.io/hook': 'PreSync',
       'argocd.argoproj.io/hook-delete-policy': 'BeforeHookCreation',
     },
   },
