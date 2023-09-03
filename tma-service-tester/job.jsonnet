@@ -4,7 +4,7 @@ local params = import 'params-develop.libsonnet';
   apiVersion: 'batch/v1',
   kind: 'Job',
   metadata: {
-    name: params.name
+    name: params.name,
     namespace: params.namespace,
   },
   spec: {
