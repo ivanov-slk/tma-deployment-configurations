@@ -16,6 +16,7 @@ spec:
   # Allow manifests to deploy from any Git repos
   sourceRepos:
     - "https://github.com/ivanov-slk/*"
+    - "https://nats-io.github.io/k8s/helm/charts/*"
 
   # Only permit applications to deploy to the guestbook namespace in the same cluster
   # Destination clusters can be identified by 'server', 'name', or both.
