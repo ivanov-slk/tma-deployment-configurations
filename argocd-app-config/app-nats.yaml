@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nats
+  namespace: argocd-system
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    name: tma
+spec:
+  project: tma
+  source:
+    chart: nats
+    repoURL: https://nats-io.github.io/k8s/helm/charts/
+    targetRevision: "1.0.2"
+    helm:
+      releaseName: nats
+      values: |
+        config:
+          jetstream:
+            enabled: true
+            fileStore:
+              enabled: false
+  destination:
+    server: "https://kubernetes.default.svc"
+    namespace: tma
