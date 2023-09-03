@@ -6,15 +6,11 @@ local params = import 'params-develop.libsonnet';
   metadata: {
     name: params.name,
     namespace: params.namespace,
-    //annotations: {
-      //'argocd.argoproj.io/hook': 'Sync',
-      //'argocd.argoproj.io/hook-delete-policy': 'BeforeHookCreation',
-    //},
   },
   spec: {
     template: {
       spec: {
-        restartPolicy: "OnFailure",
+        restartPolicy: 'OnFailure',
         containers: [
           {
             image: params.image,
