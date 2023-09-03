@@ -1,4 +1,4 @@
-name: Lint and Test Helm Charts
+name: Lint and test deployment configurations
 
 on:
   workflow_call:
