@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.2.0...v1.2.1) (2023-09-03)
+
+
+### Continuous Integration
+
+* Add action for parsing jsonnet files. ([a6a81f8](https://github.com/ivanov-slk/tma-deployment-configurations/commit/a6a81f888dd504adfcbaa44674ae32677d744f54))
+* Run tests on push to main instead of on a pull request, as this is the important check. ([193927a](https://github.com/ivanov-slk/tma-deployment-configurations/commit/193927a10af54a2f4ea60fdcfca32d726d664c9c))
+
 ## [1.2.0](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.1.0...v1.2.0) (2023-08-07)
 
 
