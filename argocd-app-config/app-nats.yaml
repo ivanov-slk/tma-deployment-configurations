@@ -21,6 +21,9 @@ spec:
             enabled: true
             fileStore:
               enabled: false
+            memoryStore:
+              enabled: true
+              maxSize: 100m
   destination:
     server: "https://kubernetes.default.svc"
     namespace: tma
