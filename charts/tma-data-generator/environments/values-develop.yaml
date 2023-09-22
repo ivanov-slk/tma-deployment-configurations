@@ -14,6 +14,9 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+podEnvironmentVariables:
+  natsServerUri: "nats://nats.tma:4222"
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: false
@@ -23,7 +26,9 @@ serviceAccount:
   # If not set and create is true, a name is generated using the fullname template
   name: ""
 
-podAnnotations: {}
+podAnnotations:
+  config.linkerd.io/skip-inbound-ports: "4222"
+  config.linkerd.io/skip-outbound-ports: "4222"
 
 podSecurityContext:
   {}
