@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.4.0](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.3.0...v1.4.0) (2023-09-22)
+
+
+### Continuous Integration & Continuous Delivery
+
+* Use v1 images for the data generator. ([53b8d40](https://github.com/ivanov-slk/tma-deployment-configurations/commit/53b8d404e591004a93d9c0914e927538fb571d60))
+
+
+### Features
+
+* Simplify the data generator chart and remove any not currently used functionalities. ([32989ce](https://github.com/ivanov-slk/tma-deployment-configurations/commit/32989cef38a736457048f5d1bdeccbf24bb35784))
+
 ## [1.3.0](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.2.1...v1.3.0) (2023-09-22)
 
 ### Maintenance
