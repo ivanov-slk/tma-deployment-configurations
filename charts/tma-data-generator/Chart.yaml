@@ -2,5 +2,5 @@ apiVersion: v2
 name: tma-data-generator
 description: A Helm chart for the Data Generator Service. Part of the Temperature Monitoring Application.
 type: application
-version: 0.1.0
-appVersion: "0.2.3"
+version: 1.0.0
+appVersion: "1.0.0"
