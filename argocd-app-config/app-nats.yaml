@@ -24,6 +24,11 @@ spec:
             memoryStore:
               enabled: true
               maxSize: 100m
+        podTemplate:
+          merge:
+            metadata:
+              annotations:
+                config.linkerd.io/opaque-ports: "4222"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: tma
