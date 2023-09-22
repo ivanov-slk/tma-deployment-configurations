@@ -35,7 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           env:
             - name: NATS_SERVER_URI
-              value: nats://demo.nats.io:4222
+              value: {{ .Values.podEnvironmentVariables.natsServerUri }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
