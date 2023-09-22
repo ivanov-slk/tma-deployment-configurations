@@ -1,5 +1,23 @@
 # Changelog
 
+## [1.3.0](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.2.1...v1.3.0) (2023-09-22)
+
+
+### Maintenance
+
+* Use v0 for the data generator image instead of a specific tag. ([431240b](https://github.com/ivanov-slk/tma-deployment-configurations/commit/431240bd7b77a24b9b0623b3a50d6d0b9c723970))
+
+
+### Features
+
+* Add NATS application in Argo via NATS's official Helm chart. ([3d864bd](https://github.com/ivanov-slk/tma-deployment-configurations/commit/3d864bd853d9cde9d358e578c3392d0049ef5dcf))
+* Start using the dedicated data generator image. ([2b4164c](https://github.com/ivanov-slk/tma-deployment-configurations/commit/2b4164c79dd86c7ec8dea2e70167a8adb09b5b44))
+
+
+### Bug Fixes
+
+* Configure port skipping by linkerd for NATS ports due to Linkerd not properly woring with opaque ports. ([1f16f36](https://github.com/ivanov-slk/tma-deployment-configurations/commit/1f16f36079823311ef9de67326e199a253650b10))
+
 ## [1.2.1](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.2.0...v1.2.1) (2023-09-03)
 
 
