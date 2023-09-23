@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.1](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.4.0...v1.4.1) (2023-09-23)
+
+
+### Continuous Integration & Continuous Delivery
+
+* Use 'latest' tag to ease new images' deployment, at least until (if) 'argocd-image-updater' is installed in the Kubernetes cluster. ([fef37d6](https://github.com/ivanov-slk/tma-deployment-configurations/commit/fef37d6bb84a1523ce573995305714aa0307e5e6))
+
 ## [1.4.0](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.3.0...v1.4.0) (2023-09-22)
 
 
