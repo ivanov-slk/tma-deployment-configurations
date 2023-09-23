@@ -6,7 +6,7 @@ The Temperature Monitoring Application is an educational Kafka app, used as a pl
 
 ## Application diagram
 
-![Temperature Monitoring Application](temperature_monitoring_application.png)
+![Temperature Monitoring Application](misc/temperature_monitoring_application.png)
 
 ## Services
 
