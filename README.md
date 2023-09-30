@@ -22,7 +22,7 @@ The repository can be found [here](https://github.com/ivanov-slk/tma-data-genera
 
 #### Current status
 
-Produces a "hello world" message.
+Produces "hello message".
 
 ### Monitoring Dashboard
 
@@ -30,8 +30,8 @@ Produces a "hello world" message.
 
 The dashboard presents some simple metrics about the data.
 
-The repository can be found [here](https://github.com/ivanov-slk/tma-data-generator).
+The repository can be found [here](https://github.com/ivanov-slk/tma-dashboard).
 
 #### Current status
 
-In progress.
+Renders "hello message".
