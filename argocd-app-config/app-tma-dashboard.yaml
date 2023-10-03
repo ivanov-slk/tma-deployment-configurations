@@ -4,7 +4,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: tma-service-tester
+  name: tma-dashboard
   namespace: argocd-system
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -16,7 +16,7 @@ spec:
   source:
     repoURL: https://github.com/ivanov-slk/tma-deployment-configurations.git
     targetRevision: HEAD
-    path: tma-service-tester
+    path: tma-dashboard
     directory:
       recurse: true
       include: "*.jsonnet"
