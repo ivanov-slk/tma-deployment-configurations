@@ -1,5 +1,28 @@
 # Changelog
 
+## [1.5.0](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.4.1...v1.5.0) (2023-10-03)
+
+
+### Maintenance
+
+* Add .gitignore file. ([f57fa4b](https://github.com/ivanov-slk/tma-deployment-configurations/commit/f57fa4bdcc7d53ca41f15fc5dcbe684835e56bae))
+
+
+### Documentation
+
+* Add diagram of the application. ([d2659ba](https://github.com/ivanov-slk/tma-deployment-configurations/commit/d2659ba47a80d4f2ad5514a5af8a5bea52e8f5ad))
+* Add script for generating the application diagram. ([ba0cb34](https://github.com/ivanov-slk/tma-deployment-configurations/commit/ba0cb34ab39b9af2bd6bcb4a0c0e68746a1b648c))
+
+
+### Features
+
+* Add deployment configurations for the TMA dashboard. ([8106d95](https://github.com/ivanov-slk/tma-deployment-configurations/commit/8106d95315f8202d60374669cd89c470bf740b72))
+
+
+### Refactoring/Restructuring
+
+* Remove the service tester, as it is not currently used. ([3efb2bf](https://github.com/ivanov-slk/tma-deployment-configurations/commit/3efb2bfd8c25d2400a4b5b0909edfd285f2e52c0))
+
 ## [1.4.1](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.4.0...v1.4.1) (2023-09-23)
 
 
