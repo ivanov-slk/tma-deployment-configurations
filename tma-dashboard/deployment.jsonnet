@@ -22,7 +22,7 @@ local params = import 'params-develop.libsonnet';
         labels: {
           app: params.name,
         },
-        annotations: {
+        annotations: {  // TODO move annotations to params
           'config.linkerd.io/skip-inbound-ports': '4222',
           'config.linkerd.io/skip-outbound-ports': '4222',
         },
