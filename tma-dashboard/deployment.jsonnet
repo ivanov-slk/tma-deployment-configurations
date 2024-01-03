@@ -32,6 +32,9 @@ local params = import 'params-develop.libsonnet';
           {
             image: params.deployment.image,
             name: params.name,
+            env: [
+              { name: 'NATS_SERVER_URI', value: 'nats://nats.tma:4222' },
+            ],
           },
         ],
       },
