@@ -35,9 +35,11 @@ local params = import 'params-develop.libsonnet';
             env: [
               { name: 'NATS_SERVER_URI', value: 'nats://nats.tma:4222' },
             ],
+            imagePullPolicy: 'Always',
           },
         ],
       },
     },
   },
 }
+// image pull policy always
