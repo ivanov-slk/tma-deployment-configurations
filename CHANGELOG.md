@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.5.1](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.5.0...v1.5.1) (2024-01-04)
+
+
+### Bug Fixes
+
+* Add annotations for excluding port 4222 from linkerd to the dashboard. ([4493ea7](https://github.com/ivanov-slk/tma-deployment-configurations/commit/4493ea756915477253bb624033b14c24e78dad35))
+* Add the NATS URI to the deployment configuration of the dashboard. ([ef1e68c](https://github.com/ivanov-slk/tma-deployment-configurations/commit/ef1e68cb3d85f6a80fb23e83377e65edc9b1d624))
+* Always pull the images. ([328755f](https://github.com/ivanov-slk/tma-deployment-configurations/commit/328755f06eafbb9d16b37d906ef6af6cbcbb67f5))
+
 ## [1.5.0](https://github.com/ivanov-slk/tma-deployment-configurations/compare/v1.4.1...v1.5.0) (2023-10-03)
 
 
