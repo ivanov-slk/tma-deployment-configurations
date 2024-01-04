@@ -42,4 +42,3 @@ local params = import 'params-develop.libsonnet';
     },
   },
 }
-// image pull policy always
