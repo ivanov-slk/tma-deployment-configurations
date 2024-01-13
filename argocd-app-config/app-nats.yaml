@@ -17,19 +17,47 @@ spec:
       releaseName: nats
       values: |
         config:
+          cluster:
+            replicas: 3
           jetstream:
-            enabled: false
+            enabled: true
             fileStore:
               enabled: false
             memoryStore:
               enabled: true
-              maxSize: 100m
+              maxSize: 100Mi
         podTemplate:
           merge:
             metadata:
               annotations:
                 config.linkerd.io/skip-inbound-ports: "4222"
                 config.linkerd.io/skip-outbound-ports: "4222"
+        container:
+          env:
+            # different from k8s units, suffix must be B, KiB, MiB, GiB, or TiB
+            # should be ~90% of memory limit
+            GOMEMLIMIT: 180MiB
+          merge:
+            # recommended limit is at least 2 CPU cores and 8Gi Memory for production JetStream clusters
+            resources:
+              requests:
+                cpu: "0.1"
+                memory: 200Mi
+              limits:
+                cpu: "0.1"
+                memory: 200Mi
+        promExporter:
+          enabled: true
+          podMonitor:
+            enabled: true
+        natsBox:
+          enabled: true
+          podTemplate:
+            merge:
+              metadata:
+                annotations:
+                  config.linkerd.io/skip-inbound-ports: "4222"
+                  config.linkerd.io/skip-outbound-ports: "4222"
   destination:
     server: "https://kubernetes.default.svc"
     namespace: tma
